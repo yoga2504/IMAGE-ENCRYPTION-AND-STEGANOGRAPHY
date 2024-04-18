@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRYPTOGRAPHY PROJECT</title>
+  <style>
+    body {
+      background-color: rgb(114, 159, 173);
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px 0;
+      color: #333;
+      background-color: transparent;
+    }
+
+    form {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      background-color: #c6c080;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    input[type="file"] {
+      background-color: azure;
+      display: block;
+      margin: 5px auto;
+      width: 80%;
+      max-width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      border-color: aqua;
+    }
+
+    input[type="file"]:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Encryption & Steganography</h2>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="image">Select image:</label>
+    <input type="file" name="image" id="image"><br>
+    <label for="secret_image">Select secret image:</label>
+    <input type="file" name="secret_image" id="secret_image"><br>
+    <input type="submit" value="Upload">
+  </form>
+
+  <h2>Extract Secret Image</h2>
+  <form action="/extract" method="post" enctype="multipart/form-data">
+    <label for="stego_image">Select stego image:</label>
+    <input type="file" name="stego_image" id="stego_image"><br>
+    <input type="submit" value="Extract">
+  </form>
+</body>
+</html>
